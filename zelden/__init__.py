@@ -1,1 +1,1 @@
-from .randomizer import Random as Random
+from .randomizer import randrange as randrange
