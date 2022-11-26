@@ -130,15 +130,4 @@ dmypy.json
 
 
 # Pycharm
-.idea/
-
-# Credentials
-credentials.py
-*.xml
-*.iml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/inspectionProfiles/Project_Default.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/zelden.iml
+.idea

@@ -1,7 +1,7 @@
 from requests import Session
 from consts import url, headers
 from credentials import api_key
-from params import set_json
+from set_json import set_json
 from rest_connection import RESTConnection
 
 
