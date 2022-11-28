@@ -1,15 +1,12 @@
 import os
 import requests
-from consts import headers, url
-from set_json import set_json
-from exceptions import RangeException, NotEnoughDataError
-from credentials import APIKEY
+from zelden.src.consts import headers, url
+from zelden.src.set_json import set_json
+from zelden.src.exceptions import RangeException, NotEnoughDataError
+from zelden.src.credentials import check_credentials
+
 
 # TODO: Implement a better SOLID approach to microservice the data handling/distribution
-
-
-def set_credentials(apikey: str = None):
-    os.environ['APIKEY'] = apikey
 
 
 def randrange(start: int = 1, end: int = 10, amount: int = 1, replacement: bool = False):
@@ -20,7 +17,7 @@ def randrange(start: int = 1, end: int = 10, amount: int = 1, replacement: bool 
     if not (start or end or amount):
         raise NotEnoughDataError('One or more arguments are missing')
 
-    apikey = APIKEY.apikey
+    apikey = check_credentials()
     s = requests.Session()
     json = set_json(start=start, end=end, amount=amount, replacement=replacement, api_key=apikey)
     response = s.post(url=url, headers=headers, json=json).json()[0]
