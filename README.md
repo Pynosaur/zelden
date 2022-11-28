@@ -9,7 +9,7 @@ Zelden is Dutch for Seldom, which is also to say, Random.
 
 
 ## STATUS
-BETA VERSION 0.0.3
+BETA VERSION 0.0.4
 
 
 # Code snippet
